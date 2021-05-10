@@ -21,6 +21,7 @@
 		0C7285C2264863A3001A02C2 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7285C1264863A3001A02C2 /* RootTabBarController.swift */; };
 		0C7285C526486F66001A02C2 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7285C426486F66001A02C2 /* UserCoordinator.swift */; };
 		0C7285C726488252001A02C2 /* ProtocolCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7285C626488252001A02C2 /* ProtocolCoordinator.swift */; };
+		0C7791A92649F2350098A2F9 /* RootTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7791A82649F2350098A2F9 /* RootTabBarItem.swift */; };
 		0C7946B026493FFE00B42457 /* UserLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7946AE26493FFE00B42457 /* UserLoginVC.swift */; };
 		0C7946B126493FFE00B42457 /* UserLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7946AF26493FFE00B42457 /* UserLoginVC.xib */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		0C7285C1264863A3001A02C2 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		0C7285C426486F66001A02C2 /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 		0C7285C626488252001A02C2 /* ProtocolCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolCoordinator.swift; sourceTree = "<group>"; };
+		0C7791A82649F2350098A2F9 /* RootTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarItem.swift; sourceTree = "<group>"; };
 		0C7946AE26493FFE00B42457 /* UserLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginVC.swift; sourceTree = "<group>"; };
 		0C7946AF26493FFE00B42457 /* UserLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserLoginVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 			children = (
 				0C7285CA264887BF001A02C2 /* UserTabViewControllers */,
 				0C7285C9264887A6001A02C2 /* EventsTabViewControllers */,
+				0C7791A82649F2350098A2F9 /* RootTabBarItem.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				0C7285C526486F66001A02C2 /* UserCoordinator.swift in Sources */,
 				0C7285A82646EDAE001A02C2 /* MainEventsTabVC.swift in Sources */,
 				0C7285BA264706CD001A02C2 /* BuyVC.swift in Sources */,
+				0C7791A92649F2350098A2F9 /* RootTabBarItem.swift in Sources */,
 				0C7285B82646EF12001A02C2 /* EventsCoordinator.swift in Sources */,
 				0C7946B026493FFE00B42457 /* UserLoginVC.swift in Sources */,
 				0C7285A42646EDAE001A02C2 /* AppDelegate.swift in Sources */,

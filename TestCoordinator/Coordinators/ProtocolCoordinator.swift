@@ -11,16 +11,12 @@ protocol CoordinatorPr: AnyObject {
   var childCoordinators: [CoordinatorPr] { get set}
   var navController: UINavigationController { get set }
     
-  //func start()
   func showVC(for vc: VCForCoordinatorPr, tagTabBarItem: Int?)
 }
 
 extension CoordinatorPr {
   func showVC(for vc: VCForCoordinatorPr, tagTabBarItem: Int?) {
-   
-    //let ff = vc
     let vcSuper = vc as! UIViewController
-    
     vc.coordinator = self
     
     if let tag = tagTabBarItem {
@@ -30,14 +26,11 @@ extension CoordinatorPr {
         self.navController.pushViewController(vcSuper, animated: true)
     }
   }
-  
 }
 
-
-
 protocol VCForCoordinatorPr: AnyObject {
-  
   var coordinator: CoordinatorPr? { get set }
+  
   static func initFromStoryBoard() -> Self
   static func initFromXib() -> Self
 }
@@ -57,14 +50,3 @@ extension VCForCoordinatorPr where Self: UIViewController {
     return self.init(nibName: className, bundle: nil)
   }
 }
-
-//MARK: 
-
-//protocol EventsCoordinatorPr: AnyObject {
-//  func buyVCShow()
-//  func loginVCShow()
-//}
-//
-//protocol UserCoordinatorPr: AnyObject {
-//  func loginVCShow()
-//}
