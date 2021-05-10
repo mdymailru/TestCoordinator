@@ -7,11 +7,17 @@
 
 import UIKit
 
-class MainViewController: UIViewController, ViewControllerInitPr {
-  weak var coordinator: UserCoordinatorPr?
+class MainUserTabVC: UIViewController, VCForCoordinatorPr {
+  
+  weak var coordinator: CoordinatorPr?
+  
+    
+  //weak var coordinator: UserCoordinatorPr?
   
   @IBAction func buyTouch(_ sender: UIButton) {
-//    coordinator?.buyVCShow()
+    coordinator?.showVC(for: UserLoginVC.initFromXib(),
+             tagTabBarItem: nil)
+    
   }
   
   

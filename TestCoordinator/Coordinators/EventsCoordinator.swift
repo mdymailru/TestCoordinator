@@ -8,7 +8,7 @@
 import UIKit
 
 
-class EventsCoordinator: CoordinatorPr, EventsCoordinatorPr {
+class EventsCoordinator: CoordinatorPr {
   
   var childCoordinators: [CoordinatorPr] = []
   var navController: UINavigationController
@@ -16,26 +16,37 @@ class EventsCoordinator: CoordinatorPr, EventsCoordinatorPr {
   init(navController: UINavigationController) {
     self.navController = navController
   }
-  
-  func start() {
-    let vc = ViewController.initVC()
-    vc.coordinator = self
-    vc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-    self.navController.pushViewController(vc, animated: false)
-  }
-    
-  func buyVCShow() {
-    let vc = BuyVC.initVC()
-    vc.coordinator = self
-    self.navController.pushViewController(vc, animated: true)
-  }
-  
-  func loginVCShow() {
-    let vc = LoginVC.initVC()
-    vc.coordinator = self
-    self.navController.pushViewController(vc, animated: true)
-  }
-  
 }
+
+//  func showVC(vc: VCForCoordinatorPr, tagTabBarItem: Int?) {
+//
+//    //print("EventsCoord: \(vc)")
+//    vc.coordinator = self
+//
+//    self.navController.pushViewController(vc as! UIViewController, animated: true)
+//  }
+  
+//  func start() {
+//    let vc = MainEventsTabVC.initFromStoryBoard()
+//    vc.coordinator = self
+//    vc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+//    self.navController.pushViewController(vc, animated: false)
+//  }
+  
+//MARK: showVC for Events
+  
+//  func buyVCShow() {
+//    let vc = BuyVC.initFromStoryBoard()
+//    vc.coordinator = self
+//    self.navController.pushViewController(vc, animated: true)
+//  }
+//
+//  func loginVCShow() {
+//    let vc = LoginVC.initFromStoryBoard()
+//    vc.coordinator = self
+//    self.navController.pushViewController(vc, animated: true)
+//  }
+//
+//}
 
 

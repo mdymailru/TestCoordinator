@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="TestCoordinator" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainUserTabVC" customModule="TestCoordinator" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,8 +19,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myP-4o-Qrz">
-                    <rect key="frame" x="83" y="433" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="83" y="433" width="51" height="30"/>
+                    <state key="normal" title="LogOut"/>
                     <connections>
                         <action selector="buyTouch:" destination="-1" eventType="touchUpInside" id="0EN-IP-DX1"/>
                     </connections>

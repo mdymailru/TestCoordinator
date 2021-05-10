@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainEventsTabVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TestCoordinator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainEventsTabVC" id="BYZ-38-t0r" userLabel="MainEventsTabVC" customClass="MainEventsTabVC" customModule="TestCoordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,11 +27,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9G-L0-qj0">
-                                <rect key="frame" x="256" y="433" width="46" height="30"/>
+                                <rect key="frame" x="250" y="433" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="KGr-kx-AbD"/>
                                 </constraints>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Second"/>
                                 <connections>
                                     <action selector="loginTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8K2-J7-g4T"/>
                                 </connections>
@@ -40,6 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="B9G-L0-qj0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DVf-jn-7vf" secondAttribute="trailing" constant="8" symbolic="YES" id="9Kx-En-gXT"/>
                             <constraint firstItem="B9G-L0-qj0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lnu-or-vRM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B9G-L0-qj0" secondAttribute="trailing" constant="112" id="SsV-8s-0rj"/>
                             <constraint firstItem="DVf-jn-7vf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="gHn-fO-ZTD"/>
@@ -66,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="783" y="147"/>
         </scene>
-        <!--LoginVC-->
+        <!--SecondVC-->
         <scene sceneID="CFX-vL-48H">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="3qx-Lj-iqd" customClass="LoginVC" customModule="TestCoordinator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="3qx-Lj-iqd" customClass="SecondVC" customModule="TestCoordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EyM-g0-KX7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
