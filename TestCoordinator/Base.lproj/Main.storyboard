@@ -36,17 +36,28 @@
                                     <action selector="loginTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8K2-J7-g4T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCS-r0-OZr">
+                                <rect key="frame" x="186" y="258" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="B9G-L0-qj0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DVf-jn-7vf" secondAttribute="trailing" constant="8" symbolic="YES" id="9Kx-En-gXT"/>
+                            <constraint firstItem="YCS-r0-OZr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="ICj-K5-HSG"/>
                             <constraint firstItem="B9G-L0-qj0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lnu-or-vRM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B9G-L0-qj0" secondAttribute="trailing" constant="112" id="SsV-8s-0rj"/>
+                            <constraint firstItem="YCS-r0-OZr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cAx-Jg-sw7"/>
                             <constraint firstItem="DVf-jn-7vf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="gHn-fO-ZTD"/>
                             <constraint firstItem="DVf-jn-7vf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vjU-6D-Y1a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="monitor" destination="YCS-r0-OZr" id="4Re-1l-mEL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,9 +70,27 @@
                     <view key="view" contentMode="scaleToFill" id="4Ba-E5-AM0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nVT-Y9-kBi">
+                                <rect key="frame" x="0.0" y="432.5" width="383" height="32"/>
+                                <segments>
+                                    <segment title="Tennis"/>
+                                    <segment title="Football"/>
+                                    <segment title="Table Tennis"/>
+                                    <segment title="Badminton"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2w6-iJ-OLN"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="nVT-Y9-kBi" firstAttribute="centerY" secondItem="4Ba-E5-AM0" secondAttribute="centerY" id="CD4-yB-nsx"/>
+                            <constraint firstItem="nVT-Y9-kBi" firstAttribute="leading" secondItem="2w6-iJ-OLN" secondAttribute="leading" id="ydE-uc-80k"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="kindOfSport" destination="nVT-Y9-kBi" id="gkK-af-6B9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuX-yk-vqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

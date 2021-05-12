@@ -11,20 +11,28 @@ protocol CoordinatorPr: AnyObject {
   var childCoordinators: [CoordinatorPr] { get set}
   var navController: UINavigationController { get set }
     
+  func start()
   func showVC(for vc: VCForCoordinatorPr, tagTabBarItem: Int?)
 }
 
 extension CoordinatorPr {
+  
   func showVC(for vc: VCForCoordinatorPr, tagTabBarItem: Int?) {
+    
     let vcSuper = vc as! UIViewController
     vc.coordinator = self
     
     if let tag = tagTabBarItem {
-        vcSuper.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: tag)
+        //navController.delegate = self as! UINavigationControllerDelegate
+        vcSuper.tabBarItem = RootTabBarItem(tag: tag)
         self.navController.setViewControllers([vcSuper], animated: false)
     } else {
         self.navController.pushViewController(vcSuper, animated: true)
     }
+  }
+  
+  func start() {
+    // no code, override if coordinator class need UINavControllerDelegate
   }
 }
 

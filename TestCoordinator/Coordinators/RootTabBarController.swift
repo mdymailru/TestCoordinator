@@ -15,19 +15,20 @@ class RootTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.eventsTabCoordinator.showVC(for: MainEventsTabVC.initFromStoryBoard(),
-                           tagTabBarItem: 0)
     
+    eventsTabCoordinator.start() //UINavControllerDelegate subscribe
+    eventsTabCoordinator.showVC(for: MainEventsTabVC.initFromStoryBoard(),
+                           tagTabBarItem: 0)
     if isUserLogin() {
       userTabCoordinator.showVC(for: MainUserTabVC.initFromXib(),
-                     tagTabBarItem: 1)
+                      tagTabBarItem: 1)
     } else {
       userTabCoordinator.showVC(for: UserLoginVC.initFromXib(),
                       tagTabBarItem: 1)
     }
     
-    self.viewControllers = [self.eventsTabCoordinator.navController,
-                            self.userTabCoordinator.navController ]
+    viewControllers = [eventsTabCoordinator.navController,
+                         userTabCoordinator.navController ]
 
         
     }
